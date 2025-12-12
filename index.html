@@ -62,28 +62,59 @@
 	</head>
 	<body class="antialiased text-gray-800">
 		<!-- Navigation (fixed / sticky header) -->
-		<nav class="bg-dark-blue shadow-lg sticky top-0 z-50">
-			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-				<div class="flex justify-between h-16">
-					<div class="flex">
-						<div class="flex-shrink-0 flex items-center">
-							<span class="text-xl font-bold text-white tracking-tight">ICPR 2026 LRLPR</span>
-						</div>
-						<div class="hidden sm:ml-6 sm:flex sm:space-x-8">
-							<a href="#overview" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Overview</a>
-							<a href="#dataset" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Dataset</a>
-							<a href="#schedule" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Schedule</a>
-							<a href="#get-started" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Get Started</a>
-							<a href="#evaluation" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Evaluation</a>
-							<a href="#rules" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Rules</a>
-							<a href="#faq" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">FAQ</a>
-							<a href="#organizers" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Organizers</a>
-							<a href="#references" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">References</a>
-						</div>
-					</div>
+<nav class="bg-dark-blue shadow-lg sticky top-0 z-50 overflow-x-hidden">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+		<div class="flex justify-between h-16">
+			<div class="flex items-center min-w-0">
+				<div class="flex-shrink-0 flex items-center min-w-0">
+					<span class="text-xl font-bold text-white tracking-tight truncate">ICPR 2026 LRLPR</span>
+				</div>
+
+				<!-- Desktop menu -->
+				<div class="hidden min-[990px]:ml-6 min-[990px]:flex min-[990px]:space-x-8">
+					<a href="#overview" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Overview</a>
+					<a href="#dataset" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Dataset</a>
+					<a href="#schedule" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Schedule</a>
+					<a href="#get-started" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Get Started</a>
+					<a href="#evaluation" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Evaluation</a>
+					<a href="#faq" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">FAQ</a>
+					<a href="#organizers" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Organizers</a>
+					<a href="#organizers" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">References</a>
 				</div>
 			</div>
-		</nav>
+
+			<!-- Mobile hamburger -->
+			<div class="flex items-center min-[990px]:hidden">
+				<button id="mobile-menu-btn" type="button"
+					class="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan"
+					aria-controls="mobile-menu" aria-expanded="false">
+					<span class="sr-only">Open main menu</span>
+					<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+					</svg>
+				</button>
+			</div>
+		</div>
+
+		<!-- Mobile menu panel -->
+		<div id="mobile-menu" class="min-[990px]:hidden hidden pb-4">
+			<div class="pt-2 space-y-1">
+				<a href="#overview" class="mobile-nav-link block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10">Overview</a>
+				<a href="#dataset" class="mobile-nav-link block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10">Dataset</a>
+				<a href="#schedule" class="mobile-nav-link block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10">Schedule</a>
+				<a href="#get-started" class="mobile-nav-link block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10">Get Started</a>
+				<a href="#evaluation" class="mobile-nav-link block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10">Evaluation</a>
+				<a href="#faq" class="mobile-nav-link block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10">FAQ</a>
+				<a href="#organizers" class="mobile-nav-link block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10">Organizers</a>
+				<a href="#references" class="mobile-nav-link block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10">References</a>
+			</div>
+		</div>
+	</div>
+</nav>
+
+
+
+
 		<!-- Hero Section -->
 		<header class="bg-white py-14 shadow-inner" id="overview">
 			<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -290,25 +321,47 @@ track_00003,GHI9012;0.4521
 <section id="get-started" class="mb-16">
 	<h2 class="section-title text-3xl font-bold text-dark-blue mb-6">Get Started</h2>
 
-	<div class="bg-white p-8 rounded-xl shadow-xl">
-			<!-- Step-by-step -->
-			<div class="p-6 border border-gray-200 rounded-lg">
-				<h3 class="text-2xl font-bold text-cyan mb-4">Step by step</h3>
-				<ol class="space-y-4 text-gray-700 list-decimal ml-5">
-					<li>
-						<span class="font-semibold">Request the training data:</span> download, complete and sign the <a href="./license-agreement.pdf" class="text-cyan font-semibold hover:underline" target="_blank">license agreement</a>, then submit the signed document via the <a href="https://forms.gle/ZDDjAtD1MgsPq5A9A" class="text-cyan font-semibold hover:underline" target="_blank">ICPR26-LRLPR Dataset Request Form</a>. Once the request is approved, a download link for the training dataset will be provided. The dataset will be made available exclusively for <b>non-commercial use</b> and only to institutional email addresses from <u>educational</u> or <u>research</u> organizations;
-					</li>
-					<li>
-						<span class="font-semibold">Develop your method:</span> predictions must be based exclusively on the five low-resolution&nbsp;(LR) images provided per track. High-resolution images are available only in the training set, so participants may explore image enhancement techniques;
+	<div class="bg-white p-8 rounded-xl shadow-xl space-y-6">
+		<!-- Step-by-step -->
+		<div class="p-6 border border-gray-200 rounded-lg">
+			<h3 class="text-2xl font-bold text-cyan mb-4">Step by step</h3>
+			<ol class="space-y-4 text-gray-700 list-decimal ml-5">
+				<li>
+					<span class="font-semibold">Request the training data:</span> download, complete and sign the <a href="./license-agreement.pdf" class="text-cyan font-semibold hover:underline" target="_blank">license agreement</a>, then submit the signed document via the <a href="https://forms.gle/ZDDjAtD1MgsPq5A9A" class="text-cyan font-semibold hover:underline" target="_blank">ICPR26-LRLPR Dataset Request Form</a>. Once the request is approved, a download link for the training dataset will be provided. The dataset will be made available exclusively for <b>non-commercial use</b> and only to institutional email addresses from <u>educational</u> or <u>research</u> organizations;
+				</li>
+				<li>
+					<span class="font-semibold">Develop your method:</span> predictions must be based exclusively on the five low-resolution&nbsp;(LR) images provided per track. High-resolution images are available only in the training set, so participants may explore image enhancement techniques;
+				</li>
+				<li>
+					<span class="font-semibold">Next steps:</span> detailed instructions for the remaining steps will be announced in the coming weeks, before the release of the public test set.
+				</li>
+			</ol>
+		</div>
 
-					</li>
-					<li>
-						<span class="font-semibold">Next steps:</span> detailed instructions for the remaining steps will be announced in the coming weeks, before the release of the public test set.
-					</li>
-				</ol>
+		<!-- Rules (moved inside Get Started) -->
+		<div class="p-6 border border-gray-200 rounded-lg">
+			<h3 id="rules-title" class="text-2xl font-bold text-cyan mb-4 inline-block px-2 py-1 rounded">
+  Rules
+</h3>
+
+
+			<div class="space-y-4">
+				<div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+					<p class="text-sm text-gray-700 mt-2">
+						External training data is permitted, but its source and usage must be clearly documented by top-ranked teams. Top-ranked teams that rely on external data will be required to report results obtained using only the provided training dataset.
+					</p>
+				</div>
+
+				<div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+					<p class="text-sm text-gray-700 mt-2">
+						If deemed necessary by the organizers, top-ranked teams may be asked to either submit their code to the organizers or make it publicly available. This may include a complete and reproducible training pipeline to verify that the results were obtained algorithmically and without using test data.
+					</p>
+				</div>
 			</div>
+		</div>
 	</div>
 </section>
+
 
 
 
@@ -395,6 +448,14 @@ track_00003,GHI9012;0.4521
 	<li>1 submission per day;</li>
 	<li>10 total submissions over the competition period.</li>
 </ul>
+<p class="text-sm text-gray-700 mt-2">
+							<b>Reminder:</b> please review the
+		<a href="#get-started" class="text-cyan font-semibold hover:underline rules-link">
+	Rules
+</a>
+		before participating.
+						</p>
+
 					</div>
 					<!-- Recognition & Publication -->
 					<div class="mt-4 p-4 bg-green-100 rounded-lg border-2 border-green-300">
@@ -408,24 +469,6 @@ track_00003,GHI9012;0.4521
 								<li>Depending on the final ranking, additional teams may also be invited to participate as contributors.</li>
 							</ul>
 						</ul>
-					</div>
-				</div>
-			</section>
-
-			<!-- Rules Section -->
-			<section id="rules" class="mb-16">
-				<h2 class="section-title text-3xl font-bold text-dark-blue mb-6">Rules</h2>
-				<div class="bg-white p-6 rounded-xl shadow-md space-y-4">
-					<div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
-						<p class="text-sm text-gray-700 mt-2">
-							External training data is permitted, but its source and usage must be clearly documented by top-ranked teams. Top-ranked teams that rely on external data will be required to report results obtained using only the provided training dataset.
-						</p>
-					</div>
-
-					<div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
-						<p class="text-sm text-gray-700 mt-2">
-							If deemed necessary by the organizers, top-ranked teams may be asked to either submit their code to the organizers or make it publicly available. This may include a complete and reproducible training pipeline to verify that the results were obtained algorithmically and without using test data.
-						</p>
 					</div>
 				</div>
 			</section>
@@ -576,30 +619,58 @@ track_00003,GHI9012;0.4521
 			</div>
 		</footer>
 		<!-- Highlight and smooth scroll script -->
+
 		<script>
-			function flashHighlight(id) {
-				const el = document.getElementById(id);
-				if (!el) return;
+  function flashHighlight(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
 
-				// Scroll to the element
-				el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    el.scrollIntoView({ behavior: "smooth", block: "center" });
 
-				// Restart animation if clicked multiple times
-				el.classList.remove('highlight-flash');
-				// Force reflow to reset the animation
-				void el.offsetWidth;
-				el.classList.add('highlight-flash');
-			}
+    el.classList.remove("highlight-flash");
+    void el.offsetWidth; // force reflow to restart animation
+    el.classList.add("highlight-flash");
+  }
 
-			document.addEventListener("DOMContentLoaded", () => {
-				const link = document.querySelector("a[href='#submission-format']");
-				if (link) {
-					link.addEventListener("click", (e) => {
-						e.preventDefault();
-						flashHighlight("submission-format");
-					});
-				}
-			});
-		</script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Submission format link
+    const submissionLink = document.querySelector("a[href='#submission-format']");
+    if (submissionLink) {
+      submissionLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        flashHighlight("submission-format");
+      });
+    }
+
+    // Rules links (can be multiple)
+    document.querySelectorAll(".rules-link").forEach((a) => {
+      a.addEventListener("click", (e) => {
+        e.preventDefault();
+        flashHighlight("rules-title");
+      });
+    });
+
+    // Mobile menu toggle
+    const btn = document.getElementById("mobile-menu-btn");
+    const menu = document.getElementById("mobile-menu");
+
+    if (btn && menu) {
+      btn.addEventListener("click", () => {
+        const isHidden = menu.classList.contains("hidden");
+        menu.classList.toggle("hidden");
+        btn.setAttribute("aria-expanded", isHidden ? "true" : "false");
+      });
+
+      menu.querySelectorAll(".mobile-nav-link").forEach((a) => {
+        a.addEventListener("click", () => {
+          menu.classList.add("hidden");
+          btn.setAttribute("aria-expanded", "false");
+        });
+      });
+    }
+  });
+</script>
+
+
 	</body>
 </html>
