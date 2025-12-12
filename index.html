@@ -73,8 +73,12 @@
 							<a href="#overview" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Overview</a>
 							<a href="#dataset" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Dataset</a>
 							<a href="#schedule" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Schedule</a>
+							<a href="#get-started" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Get Started</a>
 							<a href="#evaluation" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Evaluation</a>
+							<a href="#rules" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Rules</a>
+							<a href="#faq" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">FAQ</a>
 							<a href="#organizers" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Organizers</a>
+							<a href="#references" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">References</a>
 						</div>
 					</div>
 				</div>
@@ -89,12 +93,9 @@
 				<p class="text-lg text-gray-600 max-w-3xl mx-auto">
 					This competition addresses low-resolution license plate recognition under authentic, real-world surveillance conditions, aiming to foster robust solutions for challenging scenarios.
 				</p>
-				<div class="mt-8">
-					<a href="https://codabench.org/competitions/icpr2026-lrlpr" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg text-dark-blue bg-cyan hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 transition duration-300">
-					Join the Competition on Codabench (soon)</a>
-				</div>
 			</div>
 		</header>
+
 		<!-- Main Content -->
 		<main class="max-w-7xl mx-auto py-0 px-4 sm:px-6 lg:px-8">
 			<!-- Abstract / Description -->
@@ -130,7 +131,7 @@
 							<ul class="space-y-4 text-gray-700">
 								<li class="flex items-start">
 									<svg class="w-6 h-6 mr-2 text-dark-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.047A12.003 12.003 0 0012 21a12.003 12.003 0 008.618-3.047z"></path>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.047A12.003 12.003 0 0012 21a12.003 0 008.618-3.047z"></path>
 									</svg>
 									<div>
 										<span class="font-semibold">Per Track:</span> 5 Low-Resolution&nbsp;(LR) images and 5 High-Resolution&nbsp;(HR) images (see Figure&nbsp;1).
@@ -161,6 +162,16 @@
 										</ul>
 									</div>
 								</li>
+
+								<!-- NEW: Access / License notice -->
+								<li class="mt-2">
+									<div class="p-4 bg-blue-50 border border-blue-200 rounded-lg">
+										<p class="text-sm text-gray-700">
+											<b>Access to the training data:</b> see <a href="#get-started" class="text-cyan font-semibold hover:underline">Get Started</a>. The dataset will be made available exclusively for <b>non-commercial use</b> and only to institutional email addresses from <u>educational</u> or <u>research</u> organizations.
+										</p>
+									</div>
+								</li>
+
 							</ul>
 						</div>
 						<!-- Test Data Card -->
@@ -169,7 +180,7 @@
 							<ul class="space-y-4 text-gray-700">
 								<li class="flex items-start">
 									<svg class="w-6 h-6 mr-2 text-dark-blue flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.047A12.003 12.003 0 0012 21a12.003 12.003 0 008.618-3.047z"></path>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.047A12.003 12.003 0 0012 21a12.003 0 008.618-3.047z"></path>
 									</svg>
 									<div>
 										<span class="font-semibold">Images per Track:</span> 5 Low-Resolution&nbsp;(LR) images.
@@ -275,6 +286,32 @@ track_00003,GHI9012;0.4521
 				</div>
 			</section>
 
+			<!-- Get Started -->
+<section id="get-started" class="mb-16">
+	<h2 class="section-title text-3xl font-bold text-dark-blue mb-6">Get Started</h2>
+
+	<div class="bg-white p-8 rounded-xl shadow-xl">
+			<!-- Step-by-step -->
+			<div class="p-6 border border-gray-200 rounded-lg">
+				<h3 class="text-2xl font-bold text-cyan mb-4">Step by step</h3>
+				<ol class="space-y-4 text-gray-700 list-decimal ml-5">
+					<li>
+						<span class="font-semibold">Request the training data:</span> download, complete and sign the <a href="./license-agreement.pdf" class="text-cyan font-semibold hover:underline" target="_blank">license agreement</a>, then submit the signed document via the <a href="https://forms.gle/ZDDjAtD1MgsPq5A9A" class="text-cyan font-semibold hover:underline" target="_blank">ICPR26-LRLPR Dataset Request Form</a>. Once the request is approved, a download link for the training dataset will be provided. The dataset will be made available exclusively for <b>non-commercial use</b> and only to institutional email addresses from <u>educational</u> or <u>research</u> organizations;
+					</li>
+					<li>
+						<span class="font-semibold">Develop your method:</span> predictions must be based exclusively on the five low-resolution&nbsp;(LR) images provided per track. High-resolution images are available only in the training set, so participants may explore image enhancement techniques;
+
+					</li>
+					<li>
+						<span class="font-semibold">Next steps:</span> detailed instructions for the remaining steps will be announced in the coming weeks, before the release of the public test set.
+					</li>
+				</ol>
+			</div>
+	</div>
+</section>
+
+
+
 			<!-- Evaluation Section -->
 			<section id="evaluation" class="mb-16">
 				<h2 class="section-title text-3xl font-bold text-dark-blue mb-6">Evaluation Criteria</h2>
@@ -336,13 +373,13 @@ track_00003,GHI9012;0.4521
 						<h4 class="text-xl font-bold text-dark-blue mb-4 flex items-center">
 							<!-- Platform Icon -->
 							<svg class="w-7 h-7 mr-2 text-cyan flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-								<path stroke-width="2" stroke-linecap="round" stroke-linejoin="round" 
+								<path stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
 									d="M9.75 17h4.5m-9 4.5h13.5M3 3h18v12H3z"/>
 							</svg>
 							Competition Platform
 						</h4>
 						<p class="text-sm text-gray-700 mt-2">
-							The competition is hosted on 
+							The competition will be hosted on
 							<a href="https://codabench.org/competitions/icpr2026-lrlpr" target="_blank" class="text-cyan font-semibold hover:underline">
 							Codabench</a> (soon).
 						</p>
@@ -352,15 +389,12 @@ track_00003,GHI9012;0.4521
 							Submission Format</a>.
 						</p>
 						<p class="text-sm mt-2 text-gray-700">
-							Each participating team may consist of up to <b>five participants</b>. Teams will be limited to:
-						</p>
-						<ul class="list-disc ml-5 mt-2 text-sm text-gray-600">
-							<li>3 submissions per day;</li>
-							<li>50 total submissions over the competition period.</li>
-						</ul>
-						<p class="text-sm text-gray-700 mt-2">
-							External training data is permitted but must be clearly documented by the top teams.
-						</p>
+	Each participating team may consist of up to <b>five participants</b>. For the <b>public test set</b>, teams are subject to the following submission limits:
+</p>
+<ul class="list-disc ml-5 mt-2 text-sm text-gray-600">
+	<li>1 submission per day;</li>
+	<li>10 total submissions over the competition period.</li>
+</ul>
 					</div>
 					<!-- Recognition & Publication -->
 					<div class="mt-4 p-4 bg-green-100 rounded-lg border-2 border-green-300">
@@ -378,6 +412,76 @@ track_00003,GHI9012;0.4521
 				</div>
 			</section>
 
+			<!-- Rules Section -->
+			<section id="rules" class="mb-16">
+				<h2 class="section-title text-3xl font-bold text-dark-blue mb-6">Rules</h2>
+				<div class="bg-white p-6 rounded-xl shadow-md space-y-4">
+					<div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+						<p class="text-sm text-gray-700 mt-2">
+							External training data is permitted, but its source and usage must be clearly documented by top-ranked teams. Top-ranked teams that rely on external data will be required to report results obtained using only the provided training dataset.
+						</p>
+					</div>
+
+					<div class="p-4 bg-gray-50 rounded-lg border border-gray-200">
+						<p class="text-sm text-gray-700 mt-2">
+							If deemed necessary by the organizers, top-ranked teams may be asked to either submit their code to the organizers or make it publicly available. This may include a complete and reproducible training pipeline to verify that the results were obtained algorithmically and without using test data.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- FAQ Section -->
+			<section class="mb-16" id="faq">
+				<h2 class="section-title text-3xl font-bold text-dark-blue mb-6">FAQ (Summary)</h2>
+
+				<div class="bg-white p-6 rounded-xl shadow-md space-y-6">
+					<div class="border-l-4 border-cyan pl-4">
+						<p class="font-semibold text-dark-blue">Q: We would like to participate. What do we need to do?</p>
+						<p class="text-sm text-gray-700 mt-2">A: Complete the <a href="https://forms.gle/ZDDjAtD1MgsPq5A9A" class="text-cyan font-semibold hover:underline" target="_blank">ICPR26-LRLPR Dataset Request Form</a> by providing your contact details, institutional affiliation, and team members. Follow the instructions in the form and submit it to register.</p>
+					</div>
+
+					<div class="border-l-4 border-cyan pl-4">
+						<p class="font-semibold text-dark-blue">Q: How large can a team be?</p>
+						<p class="text-sm text-gray-700 mt-2">A: Each team may have up to <b>five</b> participants.</p>
+					</div>
+
+					<div class="border-l-4 border-cyan pl-4">
+						<p class="font-semibold text-dark-blue">Q: What are the requirements to download the dataset?</p>
+						<p class="text-sm text-gray-700 mt-2">A: Dataset access is granted after completing and submitting the <b>license agreement</b> through the <a href="https://forms.gle/ZDDjAtD1MgsPq5A9A" class="text-cyan font-semibold hover:underline" target="_blank">ICPR26-LRLPR Dataset Request Form</a>. Registration must use an <b>institutional email address from an educational or research organization</b>, such as domains ending in .edu or .ac.</p>
+					</div>
+
+					<div class="border-l-4 border-cyan pl-4">
+						<p class="font-semibold text-dark-blue">Q: How will the submissions be evaluated?</p>
+						<p class="text-sm text-gray-700 mt-2">
+							A: Submissions will be evaluated on the <b>Blind Test Set</b> using the <b>Recognition Rate</b>, which measures the proportion of tracks whose predicted license plate text exactly matches the ground truth. Additional details, including the tie-breaking procedure based on <b>Confidence Gap</b>, are described in the
+							<a href="#evaluation" class="text-cyan font-semibold hover:underline">Evaluation Criteria</a> section.
+						</p>
+					</div>
+
+
+
+					<div class="border-l-4 border-cyan pl-4">
+						<p class="font-semibold text-dark-blue">Q: What are the prizes?</p>
+						<p class="text-sm text-gray-700 mt-2">A: The top three teams will receive <b>certificates of achievement</b> from the ICPR 2026 committee. The top five teams will be invited to contribute to the <b>competition summary paper</b> to be published in the ICPR 2026 proceedings (subject to peer review). Depending on the final ranking, additional teams may also be invited to contribute.</p>
+					</div>
+
+					<div class="border-l-4 border-cyan pl-4">
+						<p class="font-semibold text-dark-blue">Q: Can we use external datasets to train our models?</p>
+						<p class="text-sm text-gray-700 mt-2">A: <b>Yes</b>. The use of additional training data is allowed, but its source and usage must be clearly documented. Top-ranked teams that use external data will also be required to submit results obtained using only the provided training dataset.</p>
+					</div>
+
+					<div class="border-l-4 border-cyan pl-4">
+						<p class="font-semibold text-dark-blue">Q: Are test sets allowed during training?</p>
+						<p class="text-sm text-gray-700 mt-2"> A: <b>No</b>. Manual annotation or any use of test data for training is <u>strictly prohibited</u>. To verify that results were obtained through a fully algorithmic process and without access to test data, top-ranked teams may be asked, if deemed necessary by the organizers, to submit their code to the organizers or make it publicly available. </p>
+					</div>
+
+					<div class="border-l-4 border-cyan pl-4">
+						<p class="font-semibold text-dark-blue">Q: Will we need to submit our code?</p>
+						<p class="text-sm text-gray-700 mt-2">A: <b>Not necessarily</b>. If deemed necessary by the organizers, top-ranked teams may be asked to either submit their code to the organizers or make it publicly available. This may include a complete and reproducible training pipeline to verify that the results were obtained algorithmically and without using test data.</p>
+					</div>
+				</div>
+			</section>
+
 			<!-- Organizers Section -->
 			<section id="organizers" class="mb-10">
 				<h2 class="section-title text-3xl font-bold text-dark-blue mb-6">Organizing Committee</h2>
@@ -385,7 +489,7 @@ track_00003,GHI9012;0.4521
 				<div class="grid md:grid-cols-3 gap-8">
 					<!-- Rayson -->
 					<div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-cyan hover-effect flex flex-col items-center text-center">
-						<img src="figures/rayson.jpg" alt="Photo of Rayson Laroca" 
+						<img src="figures/rayson.jpg" alt="Photo of Rayson Laroca"
 						     class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-dark-blue/20">
 
 						<h3 class="text-xl font-bold text-dark-blue">
@@ -403,7 +507,7 @@ track_00003,GHI9012;0.4521
 
 					<!-- Valfride -->
 					<div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-cyan hover-effect flex flex-col items-center text-center">
-						<img src="figures/valfride.jpg" alt="Photo of Valfride Nascimento" 
+						<img src="figures/valfride.jpg" alt="Photo of Valfride Nascimento"
 						     class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-dark-blue/20">
 
 						<h3 class="text-xl font-bold text-dark-blue">
@@ -421,7 +525,7 @@ track_00003,GHI9012;0.4521
 
 					<!-- David -->
 					<div class="bg-white p-6 rounded-xl shadow-lg border-t-4 border-cyan hover-effect flex flex-col items-center text-center">
-						<img src="figures/david.jpg" alt="Photo of David Menotti" 
+						<img src="figures/david.jpg" alt="Photo of David Menotti"
 						     class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-dark-blue/20">
 
 						<h3 class="text-xl font-bold text-dark-blue">
@@ -450,9 +554,8 @@ track_00003,GHI9012;0.4521
 				</div>
 			</section>
 
-
 			<!-- References Section -->
-			<section class="mb-16">
+			<section class="mb-16" id="references">
 				<h2 class="section-title text-3xl font-bold text-dark-blue mb-6">Selected References</h2>
 				<div class="space-y-4 text-sm text-gray-700 bg-white p-6 rounded-xl shadow-md">
 					<p>• V. Nascimento, G. E. Lima, R. O. Ribeiro, W. R. Schwartz, R. Laroca, D. Menotti, <i>"Toward Advancing License Plate Super-Resolution in Real-World Scenarios: A Dataset and Benchmark,"</i> Journal of the Brazilian Computer Society, vol. 31, no. 1, pp. 435-449, 2025;</p>
@@ -477,17 +580,17 @@ track_00003,GHI9012;0.4521
 			function flashHighlight(id) {
 				const el = document.getElementById(id);
 				if (!el) return;
-			
+
 				// Scroll to the element
 				el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-			
+
 				// Restart animation if clicked multiple times
 				el.classList.remove('highlight-flash');
 				// Force reflow to reset the animation
 				void el.offsetWidth;
 				el.classList.add('highlight-flash');
 			}
-			
+
 			document.addEventListener("DOMContentLoaded", () => {
 				const link = document.querySelector("a[href='#submission-format']");
 				if (link) {
