@@ -49,6 +49,24 @@
 			header[id], section[id] {
 			scroll-margin-top: 5rem;
 			}
+
+			/* Minimal link glyph, inherits text color */
+			.organizer-name-link::after {
+			  content: "";
+			  display: inline-block;
+			  width: 0.85em;
+			  height: 0.85em;
+			  margin-left: 0.1rem;
+			  vertical-align: -0.09em;
+
+			  /* inherit the link text color */
+			  background-color: currentColor;
+
+			  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11 5'/%3E%3Cpath d='M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 1 0 7.07 7.07L13 19'/%3E%3C/svg%3E");
+			  mask-size: contain;
+			  mask-repeat: no-repeat;
+			  mask-position: center;
+			}
 		</style>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-SLBDMMQD0N"></script>
@@ -168,7 +186,7 @@
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
 									</svg>
 									<div>
-										<span class="font-semibold">Scenario&nbsp;A (10,000 tracks):</span> obtained from a recently published dataset (Nascimento et al., 2025). These tracks were collected under relatively controlled environmental conditions (e.g., no rain and only during daylight hours).
+										<span class="font-semibold">Scenario&nbsp;A (10,000 tracks):</span> obtained from a recently published dataset (<a href="#nascimento2025toward" class="hover:underline reference-link">Nascimento et al., 2025</a>). These tracks were collected under relatively controlled environmental conditions (e.g., no rain and only during daylight hours).
 										<ul class="list-disc ml-5 mt-2 text-gray-600">
 											<li>Each track includes <b>annotations</b> for the license plate text, layout, and corner positions.</li>
 										</ul>
@@ -428,8 +446,8 @@ track_00003,GHI9012;0.4521
 							For the <b>public test set</b>, teams are subject to the following submission limits:
 						</p>
 						<ul class="list-disc ml-5 mt-2 text-gray-600">
-							<li>1 submission per day;</li>
-							<li>10 total submissions over the competition period.</li>
+							<li>5 submission per day;</li>
+							<li>25 total submissions over the competition period.</li>
 						</ul>
 						<p class="text-sm text-gray-700 mt-2">
 							<b>Reminder:</b> please review the
@@ -512,13 +530,13 @@ track_00003,GHI9012;0.4521
 						<img src="figures/rayson.jpg" alt="Photo of Rayson Laroca"
 							class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-dark-blue/20">
 						<h3 class="text-xl font-bold text-dark-blue">
-							<a href="https://raysonlaroca.github.io/" target="_blank" class="hover:text-cyan hover:underline">
+							<a href="https://raysonlaroca.github.io/" target="_blank" class="organizer-name-link hover:text-cyan">
 							Rayson Laroca
 							</a>
 						</h3>
 						<p class="text-cyan mb-3">Professor, PUCPR &amp; UFPR, Brazil</p>
 						<p class="text-sm text-gray-600 mb-2 flex-grow">
-							Professor at the Pontifical Catholic University of Paraná (PUCPR), Brazil. Actively engaged in automatic license plate recognition research since 2018. He has developed widely adopted benchmarks in the field, including UFPR ALPR and RodoSol ALPR, which have become reference datasets for the research community. His conference and journal publications have helped shape the current state of the art in the field.
+							Professor at the Pontifical Catholic University of Paraná (PUCPR), Brazil. Actively engaged in automatic license plate recognition research since 2018. He has developed widely adopted benchmarks in the field, including UFPR-ALPR and RodoSol-ALPR, which have become reference datasets for the research community. His conference and journal publications have helped shape the current state of the art in the field.
 						</p>
 					</div>
 					<!-- Valfride -->
@@ -526,7 +544,7 @@ track_00003,GHI9012;0.4521
 						<img src="figures/valfride.jpg" alt="Photo of Valfride Nascimento"
 							class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-dark-blue/20">
 						<h3 class="text-xl font-bold text-dark-blue">
-							<a href="https://www.inf.ufpr.br/vwnascimento/" target="_blank" class="hover:text-cyan hover:underline">
+							<a href="https://www.inf.ufpr.br/vwnascimento/" target="_blank" class="organizer-name-link hover:text-cyan">
 							Valfride Nascimento
 							</a>
 						</h3>
@@ -540,7 +558,7 @@ track_00003,GHI9012;0.4521
 						<img src="figures/david.jpg" alt="Photo of David Menotti"
 							class="w-32 h-32 object-cover rounded-full mb-4 border-4 border-dark-blue/20">
 						<h3 class="text-xl font-bold text-dark-blue">
-							<a href="https://web.inf.ufpr.br/menotti/" target="_blank" class="hover:text-cyan hover:underline">
+							<a href="https://web.inf.ufpr.br/menotti/" target="_blank" class="organizer-name-link hover:text-cyan">
 							David Menotti
 							</a>
 						</h3>
@@ -564,7 +582,7 @@ track_00003,GHI9012;0.4521
 			<section class="mb-16" id="references">
 				<h2 class="section-title text-3xl font-bold text-dark-blue mb-6">Selected References</h2>
 				<div class="space-y-4 text-sm text-gray-700 bg-white p-6 rounded-xl shadow-md">
-					<p>• V. Nascimento, G. E. Lima, R. O. Ribeiro, W. R. Schwartz, R. Laroca, D. Menotti, <i>"Toward Advancing License Plate Super-Resolution in Real-World Scenarios: A Dataset and Benchmark,"</i> Journal of the Brazilian Computer Society, vol. 31, no. 1, pp. 435-449, 2025;</p>
+					<p id="nascimento2025toward">• V. Nascimento, G. E. Lima, R. O. Ribeiro, W. R. Schwartz, R. Laroca, D. Menotti, <i>"Toward Advancing License Plate Super-Resolution in Real-World Scenarios: A Dataset and Benchmark,"</i> Journal of the Brazilian Computer Society, vol. 31, no. 1, pp. 435-449, 2025;</p>
 					<p>• H. Gong, Z. Zhang, Y. Feng, A. Nguyen, H. Liu, <i>"License Plate Recognition under Challenging Conditions Using Multi-Scale Feature Fusion,"</i> IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), pp. 17831-17840, 2025;</p>
 					<p>• R. Laroca, V. Estevam, G. J. P. Moreira, R. Minetto, D. Menotti, <i>"Advancing Multinational License Plate Recognition Through Synthetic and Real Data Fusion: A Comprehensive Evaluation,"</i> IET Intelligent Transport Systems, vol. 19, no. 1, p. e70086, 2025;</p>
 					<p>• K. Na, J. Oh, Y. Cho, B. Kim, S. Cho, J. Choi, I. Kim, <i>"MF-LPR2: Multi-frame License Plate Image Restoration and Recognition Using Optical Flow,"</i> Computer Vision and Image Understanding, vol. 256, p. 104361, 2025;</p>
@@ -577,7 +595,7 @@ track_00003,GHI9012;0.4521
 		<!-- Footer -->
 		<footer class="bg-dark-blue py-4">
 			<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-300 text-sm">
-				<p>2026 ICPR Competition on Low-Resolution License Plate Recognition (LRLPR).</p>
+				<p>2026 ICPR Competition on Low-Resolution License Plate Recognition (LRLPR)</p>
 				<p class="mt-2">
 					Contact: <a href="mailto:icpr26lrlpr@gmail.com" class="text-cyan font-semibold hover:underline">icpr26lrlpr@gmail.com</a>
 				</p>
@@ -611,6 +629,14 @@ track_00003,GHI9012;0.4521
 			    a.addEventListener("click", (e) => {
 			      e.preventDefault();
 			      flashHighlight("rules-title");
+			    });
+			  });
+
+			  // Reference links (Nascimento et al., 2025)
+			  document.querySelectorAll(".reference-link").forEach((a) => {
+			    a.addEventListener("click", (e) => {
+			      e.preventDefault();
+			      flashHighlight("nascimento2025toward");
 			    });
 			  });
 			
