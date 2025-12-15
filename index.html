@@ -49,23 +49,21 @@
 			header[id], section[id] {
 			scroll-margin-top: 5rem;
 			}
-
 			/* Minimal link glyph, inherits text color */
 			.organizer-name-link::after {
-			  content: "";
-			  display: inline-block;
-			  width: 0.85em;
-			  height: 0.85em;
-			  margin-left: 0.1rem;
-			  vertical-align: -0.09em;
-
-			  /* inherit the link text color */
-			  background-color: currentColor;
-
-			  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11 5'/%3E%3Cpath d='M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 1 0 7.07 7.07L13 19'/%3E%3C/svg%3E");
-			  mask-size: contain;
-			  mask-repeat: no-repeat;
-			  mask-position: center;
+			content: "";
+			display: inline-block;
+			width: 0.85em;
+			height: 0.85em;
+			margin-left: 0.1rem;
+			vertical-align: -0.09em;
+			/* inherit the link text color */
+			background-color: currentColor;
+			/*mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L9.5 7'/%3E%3Cpath d='M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 1 0 7.07 7.07L14 17'/%3E%3C/svg%3E");*/
+			mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L9.5 7'/%3E%3Cpath d='M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 1 0 7.07 7.07L14 17'/%3E%3C/svg%3E");
+			mask-size: contain;
+			mask-repeat: no-repeat;
+			mask-position: center;
 			}
 		</style>
 		<!-- Google tag (gtag.js) -->
@@ -248,7 +246,7 @@
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
 									</svg>
 									<div>
-										<span id="submission-format" class="font-semibold">Submission Format:</span> Participants in the competition are required to submit a single <code><b>predictions.txt</b></code> file where each line contains the prediction for one track using the following&nbsp;format:
+										<span id="submission-format" class="font-semibold">Submission Format:</span> Participants in the competition are required to submit a .zip file containing a single <code><b>predictions.txt</b></code> file where each line contains the prediction for one track using the following&nbsp;format:
 										<pre class="mt-2 p-3 bg-gray-100 rounded text-sm overflow-x-auto"><code>track_00001,ABC1234;0.9876
 track_00002,DEF5678;0.6789
 track_00003,GHI9012;0.4521
@@ -400,15 +398,16 @@ track_00003,GHI9012;0.4521
 							<p class="text-gray-700">
 								If two or more teams achieve the <b>same Recognition Rate</b>, the tie will be broken using a metric called <b>Confidence Gap</b>.
 							</p>
-							<h4 class="text-lg font-semibold text-dark-blue mt-4 mb-2">How Confidence Gap is Computed</h4>
+							<h4 class="text-lg font-semibold text-dark-blue mt-4 mb-2">
+								How Confidence Gap is Computed
+							</h4>
 							<div class="bg-yellow-100 p-4 rounded-lg mb-4 border border-yellow-200 shadow-sm flex items-center justify-center">
-								<div class="text-sm font-mono text-yellow-900 mr-4">
-									<span class="font-bold">Confidence Gap</span> =
-								</div>
-								<div class="inline-block font-mono text-sm text-yellow-900 leading-tight text-center">
-									<div>Mean Confidence of Correct Predictions</div>
-									<div class="border-t border-yellow-300 my-1"></div>
-									<div>Mean Confidence of Incorrect Predictions</div>
+								<div class="inline-flex items-center font-mono text-sm text-yellow-900 leading-tight">
+									<span class="font-bold mr-3">Confidence Gap</span>
+									<span class="mr-3">=</span>
+									<span class="mr-3">Mean Confidence of Correct Predictions</span>
+									<span class="font-bold mr-3">−</span>
+									<span class="ml-2">Mean Confidence of Incorrect Predictions</span>
 								</div>
 							</div>
 							<h4 class="text-lg font-semibold text-dark-blue mt-4 mb-2">
@@ -417,7 +416,9 @@ track_00003,GHI9012;0.4521
 							<ul class="list-disc ml-5 text-gray-600">
 								<li>The team with the <b>largest</b> Confidence Gap ranks <b>higher</b>.</li>
 								<ul class="list-disc ml-5 text-gray-600">
-									<li>A larger gap indicates a better calibrated and more reliable model.</li>
+									<li>
+										A larger gap reflects better confidence separation between correct and incorrect predictions.
+									</li>
 								</ul>
 							</ul>
 						</div>
@@ -464,7 +465,8 @@ track_00003,GHI9012;0.4521
 						</h4>
 						<ul class="list-disc ml-5 mt-2 text-gray-700">
 							<li class="mb-1"><b>All teams</b> that submit predictions for the blind test set will receive a
-								<b>certificate of participation</b> from the competition organizers;</li>
+								<b>certificate of participation</b> from the competition organizers;
+							</li>
 							<li class="mb-1">The <b>top 3</b> participating teams will receive <b>certificates of achievement</b> from the ICPR 2026 committee;</li>
 							<li>The <b>top 5</b> teams will be invited to <b>contribute to the competition summary paper</b> included in the ICPR 2026 proceedings.</li>
 							<ul class="mt-1 list-disc ml-5 text-gray-600">
@@ -631,7 +633,7 @@ track_00003,GHI9012;0.4521
 			      flashHighlight("rules-title");
 			    });
 			  });
-
+			
 			  // Reference links (Nascimento et al., 2025)
 			  document.querySelectorAll(".reference-link").forEach((a) => {
 			    a.addEventListener("click", (e) => {
