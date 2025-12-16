@@ -126,7 +126,7 @@
 			</div>
 		</nav>
 		<!-- Hero Section -->
-		<header class="bg-white py-14 shadow-inner" id="overview">
+		<header class="bg-white py-12 shadow-inner" id="overview">
 			<div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
 				<h1 class="text-4xl sm:text-5xl font-extrabold text-dark-blue mb-4">
 					ICPR 2026 Competition on Low-Resolution License Plate Recognition
@@ -134,6 +134,9 @@
 				<p class="text-lg text-gray-600 max-w-3xl mx-auto">
 					This competition addresses low-resolution license plate recognition under authentic, real-world surveillance conditions, aiming to foster robust solutions for challenging scenarios.
 				</p>
+				<div class="mt-6">
+					<a href="https://www.codabench.org/competitions/12259/" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg text-dark-blue bg-cyan hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 transition duration-300">Join the Competition on Codabench</a>
+				</div>
 			</div>
 		</header>
 		<!-- Main Content -->
@@ -157,13 +160,13 @@
 						<img src="figures/figure1.jpg"
 							alt="Illustrative example of low resolution and high resolution license plate images"
 							class="w-full rounded-lg shadow-md">
-						<figcaption class="mt-2 text-sm text-gray-500 text-justify">
+						<figcaption id="figure-1" class="mt-2 mb-3 text-sm text-gray-500 text-justify">
 							<b>Figure 1. Examples of tracks from the competition dataset.</b> Each track in the training set contains five consecutive low-resolution (LR) images and five consecutive high-resolution (HR) images of the same license plate. Each row illustrates a complete track, with LR images displayed on the left and their corresponding HR counterparts on the right. <b class="text-red-500">In the competition, participants must predict the license plate text using only the low-resolution (LR) images</b>. The HR images are included solely in the training set, enabling participants to explore image enhancement and super-resolution strategies to improve recognition accuracy.
 						</figcaption>
 					</figure>
 				</div>
-				<div class="bg-white p-8 rounded-xl shadow-xl">
-					<div class="grid md:grid-cols-2 gap-8">
+				<div class="bg-white p-6 rounded-xl shadow-xl">
+					<div class="grid md:grid-cols-2 gap-6">
 						<!-- Training Data Card -->
 						<div class="p-6 border border-gray-200 rounded-lg">
 							<h3 class="text-2xl font-bold text-cyan mb-4">Training Data (LR + HR images)</h3>
@@ -173,9 +176,9 @@
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.047A12.003 12.003 0 0012 21a12.003 0 008.618-3.047z"></path>
 									</svg>
 									<div>
-										<span class="font-semibold">Per Track:</span> 5 Low-Resolution&nbsp;(LR) images and 5 High-Resolution&nbsp;(HR) images (see Figure&nbsp;1).
+										<span class="font-semibold">Per Track:</span> 5 Low-Resolution&nbsp;(LR) images and 5 High-Resolution&nbsp;(HR) images (see <a href="#figure-1" class="hover:underline figure-link">Figure&nbsp;1</a>).
 										<ul class="list-disc ml-5 mt-2 text-gray-600">
-											<li>The dataset creation process is illustrated in Figure&nbsp;2.</li>
+											<li>The dataset creation process is illustrated in <a href="#figure-2" class="hover:underline figure-link">Figure&nbsp;2</a>.</li>
 										</ul>
 									</div>
 								</li>
@@ -195,7 +198,7 @@
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
 									</svg>
 									<div>
-										<span class="font-semibold">Scenario&nbsp;B (10,000 tracks):</span> newly collected specifically for this competition, using the same camera as Scenario&nbsp;A but oriented in a different direction. These tracks were captured under a wider range of environmental conditions (Figure&nbsp;3).
+										<span class="font-semibold">Scenario&nbsp;B (10,000 tracks):</span> newly collected specifically for this competition, using the same camera as Scenario&nbsp;A but oriented in a different direction. These tracks were captured under a wider range of environmental conditions (<a href="#figure-3" class="hover:underline figure-link">Figure&nbsp;3</a>).
 										<ul class="list-disc ml-5 mt-2 text-gray-600">
 											<li>Each track includes <b>annotations</b> for the license plate text and layout. Corner annotations are not provided.</li>
 										</ul>
@@ -238,7 +241,7 @@
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
 									</svg>
 									<div>
-										<span class="font-semibold">Blind Test Set (3,000 Tracks):</span> Tracks sourced from Scenario&nbsp;B, used for final competition ranking.
+										<span class="font-semibold">Blind Test Set (3,000+ Tracks):</span> tracks sourced from Scenario&nbsp;B, used for final competition ranking.
 									</div>
 								</li>
 								<li class="flex items-start">
@@ -246,7 +249,7 @@
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
 									</svg>
 									<div>
-										<span id="submission-format" class="font-semibold">Submission Format:</span> Participants in the competition are required to submit a .zip file containing a single <code><b>predictions.txt</b></code> file where each line contains the prediction for one track using the following&nbsp;format:
+										<span id="submission-format" class="font-semibold">Submission Format:</span> Participants in the competition are required to submit a <code><b>.zip</b></code> file containing a single <code><b>.txt</b></code> file where each line contains the prediction for one track using the following&nbsp;format:
 										<pre class="mt-2 p-3 bg-gray-100 rounded text-sm overflow-x-auto"><code>track_00001,ABC1234;0.9876
 track_00002,DEF5678;0.6789
 track_00003,GHI9012;0.4521
@@ -269,7 +272,7 @@ track_00003,GHI9012;0.4521
 						<img src="figures/figure2.jpg"
 							alt="Overview of the dataset creation process for license plate images"
 							class="w-full rounded-lg shadow-md">
-						<figcaption class="mt-2 text-sm text-gray-500 text-justify">
+						<figcaption id="figure-2" class="mt-2 text-sm text-gray-500 text-justify">
 							<b>Figure 2. Overview of the dataset creation process.</b> License plates were first detected with YOLOv11 and then tracked with BoT-SORT. Low-resolution patches correspond to images captured when the vehicle was farther from the camera, while high-resolution patches were obtained when the vehicle was closer. Each license plate text was subsequently labeled semi-automatically using a state-of-the-art recognition model applied to the high-resolution patches.
 						</figcaption>
 					</figure>
@@ -280,7 +283,7 @@ track_00003,GHI9012;0.4521
 						<img src="figures/figure3.jpg"
 							alt="Examples of capture conditions from Scenario B in the competition dataset"
 							class="w-full rounded-lg shadow-md">
-						<figcaption class="mt-2 text-sm text-gray-500 text-justify">
+						<figcaption id="figure-3" class="mt-2 text-sm text-gray-500 text-justify">
 							<b>Figure 3. Examples of capture conditions from which the LP images in the competition dataset were extracted (Scenario&nbsp;B).</b> These images showcase a variety of vehicle types, captured under different environmental conditions.
 						</figcaption>
 					</figure>
@@ -303,7 +306,7 @@ track_00003,GHI9012;0.4521
 					<div class="p-6 border-l-4 border-cyan rounded-lg bg-gray-50 hover-effect">
 						<p class="text-sm font-medium text-black"><b>Jan 12, 2026</b></p>
 						<p class="text-xl font-semibold text-dark-blue">Public Test Set Releases</p>
-						<p class="text-xs text-gray-500">30% of the blind test data (used for leaderboard)</p>
+						<p class="text-xs text-gray-500">~30% of the blind test data (used for leaderboard)</p>
 					</div>
 					<div class="p-6 border-l-4 border-cyan rounded-lg bg-gray-50 hover-effect">
 						<p class="text-sm font-medium text-black">Feb 25, 2026</p>
@@ -434,7 +437,8 @@ track_00003,GHI9012;0.4521
 							Competition Platform
 						</h4>
 						<p class="text-gray-700 mt-2">
-							The competition will be hosted on Codabench (soon).
+							The competition is hosted on <a href="https://www.codabench.org/competitions/12259/" target="_blank" class="text-cyan font-semibold hover:underline">
+							Codabench</a>.
 						</p>
 						<p class="text-gray-700 mt-2">
 							For details on the required submission file, please see
@@ -637,6 +641,16 @@ track_00003,GHI9012;0.4521
 			    a.addEventListener("click", (e) => {
 			      e.preventDefault();
 			      flashHighlight("nascimento2025toward");
+			    });
+			  });
+
+			  // Figure links (Figure 1/2/3)
+			  document.querySelectorAll(".figure-link").forEach((a) => {
+			    a.addEventListener("click", (e) => {
+			      e.preventDefault();
+			      const href = a.getAttribute("href") || "";
+			      const targetId = href.startsWith("#") ? href.slice(1) : href;
+			      if (targetId) flashHighlight(targetId);
 			    });
 			  });
 			
