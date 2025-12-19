@@ -380,13 +380,17 @@ track_00003,GHI9012;0.4521
 							</p>
 							<h4 class="text-lg font-semibold text-dark-blue mt-4 mb-2">How Recognition Rate is Computed</h4>
 							<div class="bg-red-100 p-4 rounded-lg mb-4 border border-red-200 shadow-sm flex items-center justify-center">
-								<div class="text-sm font-mono text-red-900 mr-4">
-									<span class="font-bold">Recognition Rate</span> =
-								</div>
-								<div class="inline-block font-mono text-sm text-red-900 leading-tight text-center">
-									<div>Number of Correct Tracks</div>
-									<div class="border-t border-red-300 my-1"></div>
-									<div>Total Tracks in the Test Set</div>
+								<div class="bg-red-100 p-4 rounded-lg border border-red-200 shadow-sm">
+								  <div class="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-center">
+								    <div class="text-sm font-mono text-red-900">
+								      <span class="font-bold">Recognition Rate</span> =
+								    </div>
+								    <div class="inline-block font-mono text-sm text-red-900 leading-tight text-center">
+								      <div>Number of Correct Tracks</div>
+								      <div class="border-t border-red-300 my-1"></div>
+								      <div>Total Tracks in the Test Set</div>
+								    </div>
+								  </div>
 								</div>
 							</div>
 							<h4 class="text-lg font-semibold text-dark-blue mt-4 mb-2">Criteria for a Correct Prediction</h4>
@@ -405,13 +409,13 @@ track_00003,GHI9012;0.4521
 							<h4 class="text-lg font-semibold text-dark-blue mt-4 mb-2">
 								How Confidence Gap is Computed
 							</h4>
-							<div class="bg-yellow-100 p-4 rounded-lg mb-4 border border-yellow-200 shadow-sm flex items-center justify-center">
-								<div class="inline-flex items-center font-mono text-sm text-yellow-900 leading-tight">
-									<span class="font-bold mr-3">Confidence Gap</span>
-									<span class="mr-3">=</span>
-									<span class="mr-3">Mean Confidence of Correct Predictions</span>
-									<span class="font-bold mr-3">−</span>
-									<span class="ml-2">Mean Confidence of Incorrect Predictions</span>
+							<div class="bg-yellow-100 p-4 rounded-lg mb-4 border border-yellow-200 shadow-sm">
+								<div class="flex flex-wrap items-center justify-center gap-x-2 gap-y-1 font-mono text-sm text-yellow-900 text-center">
+									<span class="font-bold">Confidence Gap</span>
+									<span>=</span>
+									<span>Mean Confidence of Correct Predictions</span>
+									<span class="font-bold">−</span>
+									<span>Mean Confidence of Incorrect Predictions</span>
 								</div>
 							</div>
 							<h4 class="text-lg font-semibold text-dark-blue mt-4 mb-2">
@@ -635,36 +639,36 @@ track_00003,GHI9012;0.4521
 			  // Submission format link
 			  const submissionLink = document.querySelector("a[href='#submission-format']");
 			  if (submissionLink) {
-			    submissionLink.addEventListener("click", (e) => {
-			      e.preventDefault();
-			      flashHighlight("submission-format");
-			    });
+				submissionLink.addEventListener("click", (e) => {
+				  e.preventDefault();
+				  flashHighlight("submission-format");
+				});
 			  }
 			
 			  // Rules links (can be multiple)
 			  document.querySelectorAll(".rules-link").forEach((a) => {
-			    a.addEventListener("click", (e) => {
-			      e.preventDefault();
-			      flashHighlight("rules-title");
-			    });
+				a.addEventListener("click", (e) => {
+				  e.preventDefault();
+				  flashHighlight("rules-title");
+				});
 			  });
 			
 			  // Reference links (Nascimento et al., 2025)
 			  document.querySelectorAll(".reference-link").forEach((a) => {
-			    a.addEventListener("click", (e) => {
-			      e.preventDefault();
-			      flashHighlight("nascimento2025toward");
-			    });
+				a.addEventListener("click", (e) => {
+				  e.preventDefault();
+				  flashHighlight("nascimento2025toward");
+				});
 			  });
 			
 			  // Figure links (Figure 1/2/3)
 			  document.querySelectorAll(".figure-link").forEach((a) => {
-			    a.addEventListener("click", (e) => {
-			      e.preventDefault();
-			      const href = a.getAttribute("href") || "";
-			      const targetId = href.startsWith("#") ? href.slice(1) : href;
-			      if (targetId) flashHighlight(targetId);
-			    });
+				a.addEventListener("click", (e) => {
+				  e.preventDefault();
+				  const href = a.getAttribute("href") || "";
+				  const targetId = href.startsWith("#") ? href.slice(1) : href;
+				  if (targetId) flashHighlight(targetId);
+				});
 			  });
 			
 			  // Mobile menu toggle
@@ -672,18 +676,18 @@ track_00003,GHI9012;0.4521
 			  const menu = document.getElementById("mobile-menu");
 			
 			  if (btn && menu) {
-			    btn.addEventListener("click", () => {
-			      const isHidden = menu.classList.contains("hidden");
-			      menu.classList.toggle("hidden");
-			      btn.setAttribute("aria-expanded", isHidden ? "true" : "false");
-			    });
+				btn.addEventListener("click", () => {
+				  const isHidden = menu.classList.contains("hidden");
+				  menu.classList.toggle("hidden");
+				  btn.setAttribute("aria-expanded", isHidden ? "true" : "false");
+				});
 			
-			    menu.querySelectorAll(".mobile-nav-link").forEach((a) => {
-			      a.addEventListener("click", () => {
-			        menu.classList.add("hidden");
-			        btn.setAttribute("aria-expanded", "false");
-			      });
-			    });
+				menu.querySelectorAll(".mobile-nav-link").forEach((a) => {
+				  a.addEventListener("click", () => {
+					menu.classList.add("hidden");
+					btn.setAttribute("aria-expanded", "false");
+				  });
+				});
 			  }
 			});
 		</script>
