@@ -66,7 +66,19 @@
 			mask-position: center;
 			}
 			#rules-title {
-				scroll-margin-top: 6rem; /* adjust to your header height */
+				scroll-margin-top: 6rem;
+			}
+			#figure-1 {
+				scroll-margin-top: 6rem;
+			}
+			#submission-format {
+				scroll-margin-top: 6rem;
+			}
+			#figure-2 {
+				scroll-margin-top: 6rem;
+			}
+			#figure-3 {
+				scroll-margin-top: 6rem;
 			}
 		</style>
 		<!-- Google tag (gtag.js) -->
@@ -159,11 +171,11 @@
 				<h2 class="section-title text-3xl font-bold text-dark-blue mb-6">Dataset</h2>
 				<!-- Dataset Illustration: Figure 1 -->
 				<div class="mb-2 flex justify-center">
-					<figure class="max-w-6xl">
+					<figure id="figure-1" class="max-w-6xl">
 						<img src="figures/figure1.jpg"
 							alt="Illustrative example of low resolution and high resolution license plate images"
 							class="w-full rounded-lg shadow-md">
-						<figcaption id="figure-1" class="mt-2 mb-3 text-sm text-gray-500 text-justify">
+						<figcaption class="mt-2 mb-3 text-sm text-gray-500 text-justify">
 							<b>Figure 1. Examples of tracks from the competition dataset.</b> Each track in the training set contains five consecutive low-resolution (LR) images and five consecutive high-resolution (HR) images of the same license plate. Each row illustrates a complete track, with LR images displayed on the left and their corresponding HR counterparts on the right. <b class="text-red-500">In the competition, participants must predict the license plate text using only the low-resolution (LR) images</b>. The HR images are included solely in the training set, enabling participants to explore image enhancement and super-resolution strategies to improve recognition accuracy.
 						</figcaption>
 					</figure>
@@ -179,9 +191,9 @@
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.047A12.003 12.003 0 0012 21a12.003 0 008.618-3.047z"></path>
 									</svg>
 									<div>
-										<span class="font-semibold">Per Track:</span> 5 Low-Resolution&nbsp;(LR) images and 5 High-Resolution&nbsp;(HR) images (see <a href="#figure-1" class="hover:underline figure-link">Figure&nbsp;1</a>).
+										<span class="font-semibold">Per Track:</span> 5 Low-Resolution&nbsp;(LR) images and 5 High-Resolution&nbsp;(HR) images (see <a href="#figure-1" class="hover:underline">Figure&nbsp;1</a>).
 										<ul class="list-disc ml-5 mt-2 text-gray-600">
-											<li>The dataset creation process is illustrated in <a href="#figure-2" class="hover:underline figure-link">Figure&nbsp;2</a>.</li>
+											<li>The dataset creation process is illustrated in <a href="#figure-2" class="hover:underline">Figure&nbsp;2</a>.</li>
 										</ul>
 									</div>
 								</li>
@@ -201,7 +213,7 @@
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
 									</svg>
 									<div>
-										<span class="font-semibold">Scenario&nbsp;B (10,000 tracks):</span> newly collected specifically for this competition, using the same camera as Scenario&nbsp;A but oriented in a different direction. These tracks were captured under a wider range of environmental conditions (<a href="#figure-3" class="hover:underline figure-link">Figure&nbsp;3</a>).
+										<span class="font-semibold">Scenario&nbsp;B (10,000 tracks):</span> newly collected specifically for this competition, using the same camera as Scenario&nbsp;A but oriented in a different direction. These tracks were captured under a wider range of environmental conditions (<a href="#figure-3" class="hover:underline">Figure&nbsp;3</a>).
 										<ul class="list-disc ml-5 mt-2 text-gray-600">
 											<li>Each track includes <b>annotations</b> for the license plate text and layout. Corner annotations are not provided.</li>
 										</ul>
@@ -234,7 +246,7 @@
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
 									</svg>
 									<div>
-										<span class="font-semibold">Public Test Set (1,000 Tracks):</span> tracks sourced from Scenario&nbsp;B, used for public leaderboard ranking&nbsp;(soon).
+										<span class="font-semibold">Public Test Set (1,000 Tracks):</span> tracks sourced from Scenario&nbsp;B, used for public leaderboard ranking.
 										<p class="text-sm italic text-gray-500">Note: This set is a subset of the Blind Test Set.</p>
 									</div>
 								</li>
@@ -271,10 +283,10 @@ track_00003,GHI9012;0.4521
 				<!-- Dataset Illustration: Figure 2 -->
 				<div class="mt-8 mb-8 flex justify-center">
 					<figure class="max-w-4xl">
-						<img src="figures/figure2.jpg"
+						<img id="figure-2" src="figures/figure2.jpg"
 							alt="Overview of the dataset creation process for license plate images"
 							class="w-full rounded-lg shadow-md">
-						<figcaption id="figure-2" class="mt-2 text-sm text-gray-500 text-justify">
+						<figcaption class="mt-2 text-sm text-gray-500 text-justify">
 							<b>Figure 2. Overview of the dataset creation process.</b> License plates were first detected with YOLOv11 and then tracked with BoT-SORT. Low-resolution patches correspond to images captured when the vehicle was farther from the camera, while high-resolution patches were obtained when the vehicle was closer. Each license plate text was subsequently labeled semi-automatically using a state-of-the-art recognition model applied to the high-resolution patches.
 						</figcaption>
 					</figure>
@@ -282,10 +294,10 @@ track_00003,GHI9012;0.4521
 				<!-- Dataset Illustration: Figure 3 -->
 				<div class="mb-8 flex justify-center">
 					<figure class="max-w-4xl">
-						<img src="figures/figure3.jpg"
+						<img id="figure-3" src="figures/figure3.jpg"
 							alt="Examples of capture conditions from Scenario B in the competition dataset"
 							class="w-full rounded-lg shadow-md">
-						<figcaption id="figure-3" class="mt-2 text-sm text-gray-500 text-justify">
+						<figcaption class="mt-2 text-sm text-gray-500 text-justify">
 							<b>Figure 3. Examples of capture conditions from which the LP images in the competition dataset were extracted (Scenario&nbsp;B).</b> These images showcase a variety of vehicle types, captured under different environmental conditions.
 						</figcaption>
 					</figure>
@@ -351,7 +363,8 @@ track_00003,GHI9012;0.4521
 								<span class="font-semibold">Develop your method:</span> predictions must be based exclusively on the five low-resolution&nbsp;(LR) images provided per track. High-resolution images are available only in the training set, so participants may explore image enhancement techniques;
 							</li>
 							<li>
-								<span class="font-semibold">Next steps:</span> detailed instructions for the remaining steps will be announced in the coming weeks, before the release of the public test set.
+								<span class="font-semibold">Submit your predictions:</span>
+								run your model locally on the public or blind test set and generate a <code><b>.txt</b></code> file (e.g., <code>predictions.txt</code>) that strictly follows the required <a href="#submission-format" class="text-cyan font-semibold hover:underline">format</a>. Compress this file into a <code><b>.zip</b></code> archive (e.g., <code>submission.zip</code>) and upload it through the <b>My Submissions</b> tab on <a href="https://www.codabench.org/competitions/12259/#/participate-tab" target="_blank" class="text-cyan font-semibold hover:underline">Codabench</a>. Before submitting, please carefully review the Submission Guidelines tab available on Codabench.
 							</li>
 						</ol>
 					</div>
@@ -397,10 +410,9 @@ track_00003,GHI9012;0.4521
 							<li>
 								<span class="font-semibold">No manual labeling:</span> manual inspection or annotation of the test sets is <u>strictly prohibited</u>. All predictions must be generated exclusively by automated methods, with no human intervention or post-processing. If deemed necessary by the organizers, top-ranked teams may be required to submit their code to the organizers or make it publicly available. This may include a complete and fully reproducible training and inference pipeline, used solely to verify that the reported results were obtained algorithmically and without any use of test data during&nbsp;training;
 							</li>
-
 							<li>
 								<span class="font-semibold">Disqualification:</span>
-								any form of cheating or violation of the competition rules, including registering with false or misleading information, participating in more than one team, or submitting results that do not reflect the original work of the registered team (e.g., plagiarism or reuse of others’ results without proper attribution), will result in <u>immediate disqualification</u>.
+								any form of cheating or violation of the competition rules, including registering with false or misleading information, participating in more than one team, unfairly exploiting in any way the Codabench platform, or submitting results that do not reflect the original work of the registered team (e.g., plagiarism or reuse of others’ results without proper attribution), will result in <u>immediate&nbsp;disqualification</u>.
 							</li>
 						</ul>
 					</div>
@@ -535,7 +547,7 @@ track_00003,GHI9012;0.4521
 							ICPR26-LRLPR Dataset Request Form
 							</a>
 							by providing your contact details, institutional affiliation, team members, and your
-							<a href="https://www.codabench.org/competitions/12259/#/participate-tab" target="_blank" class="text-cyan font-semibold hover:underline">Codabench</a> username. A Gmail account is required to submit the
+							<a href="https://www.codabench.org/competitions/12259/#/participate-tab" target="_blank" class="text-cyan font-semibold hover:underline">Codabench</a> username. In addition to submitting the form, you must also complete your registration on the <a href="https://www.codabench.org/competitions/12259/#/participate-tab" target="_blank" class="text-cyan font-semibold hover:underline">Codabench</a> competition page. A Gmail account is required to submit the
 							<a href="./license-agreement.pdf" class="text-cyan font-semibold hover:underline" target="_blank">
 							license agreement
 							</a>
@@ -550,7 +562,7 @@ track_00003,GHI9012;0.4521
 					<div class="border-l-4 border-cyan pl-4">
 						<p class="font-semibold text-dark-blue">Q: How will the submissions be evaluated?</p>
 						<p class="text-sm text-gray-700 mt-2">
-							A: Submissions will be evaluated on the <b>Blind Test Set</b> using the <b>Recognition Rate</b>, which measures the proportion of tracks whose predicted license plate text exactly matches the ground truth. Additional details, including the tie-breaking procedure based on Confidence Gap, are described in the
+							A: Submissions will be evaluated on the <b>Blind Test Set</b> using the <b><a href="#evaluation" class="text-cyan font-semibold hover:underline">Recognition Rate</a></b>, which measures the proportion of tracks whose predicted license plate text exactly matches the ground truth. Additional details, including the tie-breaking procedure based on Confidence Gap, are described in the
 							<a href="#evaluation" class="text-cyan font-semibold hover:underline">Evaluation Criteria</a> section.
 						</p>
 					</div>
