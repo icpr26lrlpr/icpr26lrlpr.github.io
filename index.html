@@ -161,7 +161,7 @@
 				<h2 class="section-title text-3xl font-bold text-dark-blue mb-5">The Challenge</h2>
 				<div class="text-gray-700">
 					<div>
-						<p class="mb-4">In surveillance contexts, license plate images are frequently captured at low resolutions or subjected to heavy compression due to storage and bandwidth limitations. Consequently, characters often become distorted, blend into the background, or overlap with neighboring symbols, making automated recognition particularly challenging.</p>
+						<p class="mb-4">In surveillance contexts, license plate images are frequently captured at low resolutions or subjected to heavy compression due to storage and bandwidth limitations. Consequently, license plate characters often become distorted, blend into the background, or overlap with neighboring symbols, making automated recognition particularly challenging.</p>
 						<p class="mb-4">Recognizing these low-resolution license plates remains a highly challenging and underexplored problem with strong forensic and societal relevance. The difficulty is evident in the fact that even state-of-the-art methods currently struggle to surpass 50-60% recognition accuracy. Improving recognition performance under such adverse conditions, therefore, offers a significant opportunity to substantially narrow investigative searches and expedite law enforcement decisions. This competition aims to encourage the development of advanced approaches, such as super-resolution, temporal modeling, and robust Optical Character Recognition (OCR) techniques, capable of operating effectively despite low-quality input conditions.</p>
 					</div>
 				</div>
@@ -247,7 +247,7 @@
 									</svg>
 									<div>
 										<span class="font-semibold">Public Test Set (1,000 Tracks):</span> tracks sourced from Scenario&nbsp;B, used for public leaderboard ranking.
-										<p class="text-sm italic text-gray-500">Note: This set is a subset of the Blind Test Set.</p>
+										<p class="text-sm italic text-gray-500">Note: This set is a subset of the Blind Test Set. Scores obtained here are for reference only and do not determine the final ranking.</p>
 									</div>
 								</li>
 								<li class="flex items-start">
@@ -501,22 +501,29 @@ track_00003,GHI9012;0.4521
 							</svg>
 							Competition Platform
 						</h4>
-						<p class="text-gray-700 mt-2">
-							The competition is hosted on <a href="https://www.codabench.org/competitions/12259/#/participate-tab" target="_blank" class="text-cyan font-semibold hover:underline">
-							Codabench</a>.
-						</p>
-						<p class="text-gray-700 mt-2">
-							For details on the required submission file, please see
-							<a href="#submission-format" class="text-cyan font-semibold hover:underline">
-							Submission Format</a>.
-						</p>
-						<p class="mt-2 text-gray-700">
-							For the <b>public test set</b>, teams are subject to the following submission limits:
-						</p>
-						<ul class="list-disc ml-5 mt-2 text-gray-600">
-							<li>5 submission per day;</li>
-							<li>25 total submissions over the competition period.</li>
+						<ul class="list-disc ml-5 mt-2 text-gray-700">
+							<li class="mb-1">
+								The competition is hosted on <a href="https://www.codabench.org/competitions/12259/#/participate-tab" target="_blank" class="text-cyan font-semibold hover:underline"> Codabench</a>;
+							</li>
+							<li class="mb-1">
+								For details on the required submission file, please see <a href="#submission-format" class="text-cyan font-semibold hover:underline"> Submission Format</a>;
+							</li>
+							<li class="mt-1">
+								For the <b>public test set</b>, teams are subject to the following submission limits:
+							</li>
+								<ul class="list-disc ml-5 text-gray-600">
+									<li>5 submission per day;</li>
+									<li>25 total submissions.</li>
+								</ul>
+							<li class="mt-1">
+								For the <b>blind test set</b>, teams are subject to the following submission limits:
+								<ul class="list-disc ml-5 text-gray-600">
+									<li>3 submission per day;</li>
+									<li>3 total submissions.</li>
+								</ul>
+							</li>
 						</ul>
+							
 						<p class="text-sm text-gray-700 mt-2">
 							<b>Reminder:</b> please review the
 							<a href="#rules-title" class="text-cyan font-semibold hover:underline">Rules</a>
