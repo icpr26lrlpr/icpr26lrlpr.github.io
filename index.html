@@ -102,7 +102,7 @@
 							<span class="text-xl font-bold text-white tracking-tight truncate">ICPR 2026 LRLPR</span>
 						</div>
 						<!-- Desktop menu -->
-						<div class="hidden min-[990px]:ml-6 min-[990px]:flex min-[990px]:space-x-8">
+						<div class="hidden min-[1205px]:ml-6 min-[1205px]:flex min-[1205px]:space-x-8">
 							<a href="#overview" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Overview</a>
 							<a href="#dataset" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Dataset</a>
 							<a href="#schedule" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Schedule</a>
@@ -111,11 +111,12 @@
 							<a href="https://www.codabench.org/competitions/12259/#/results-tab" target="_blank" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Leaderboard</a>
 							<a href="#faq" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">FAQ</a>
 							<a href="#organizers" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Organizers</a>
+							<a href="#citation" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">Citation</a>
 							<a href="#references" class="border-b-2 border-transparent text-white hover:border-cyan inline-flex items-center px-1 pt-1 text-sm font-medium transition duration-150">References</a>
 						</div>
 					</div>
 					<!-- Mobile hamburger -->
-					<div class="flex items-center min-[990px]:hidden">
+					<div class="flex items-center min-[1205px]:hidden">
 						<button id="mobile-menu-btn" type="button"
 							class="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-cyan"
 							aria-controls="mobile-menu" aria-expanded="false">
@@ -127,7 +128,7 @@
 					</div>
 				</div>
 				<!-- Mobile menu panel -->
-				<div id="mobile-menu" class="min-[990px]:hidden hidden pb-4">
+				<div id="mobile-menu" class="min-[1205px]:hidden hidden pb-4">
 					<div class="pt-2 space-y-1">
 						<a href="#overview" class="mobile-nav-link block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10">Overview</a>
 						<a href="#dataset" class="mobile-nav-link block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10">Dataset</a>
@@ -137,6 +138,7 @@
 						<a href="https://www.codabench.org/competitions/12259/#/results-tab" target="_blank" class="mobile-nav-link block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10">Leaderboard</a>
 						<a href="#faq" class="mobile-nav-link block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10">FAQ</a>
 						<a href="#organizers" class="mobile-nav-link block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10">Organizers</a>
+						<a href="#citation" class="mobile-nav-link block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10">Citation</a>
 						<a href="#references" class="mobile-nav-link block rounded-md px-3 py-2 text-base font-medium text-white hover:bg-white/10">References</a>
 					</div>
 				</div>
@@ -151,8 +153,10 @@
 				<p class="text-lg text-gray-600 max-w-3xl mx-auto">
 					This competition addresses low-resolution license plate recognition under authentic, real-world surveillance conditions, aiming to foster robust solutions for challenging scenarios.
 				</p>
-				<div class="mt-6">
-					<a href="https://www.codabench.org/competitions/12259/#/results-tab" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-lg text-dark-blue bg-cyan hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-cyan-500 transition duration-300">View the leaderboard on Codabench</a>
+				<div class="mt-6 flex flex-wrap justify-center gap-3">
+					<a href="https://arxiv.org/abs/2604.22506" target="_blank" class="inline-flex items-center px-6 py-3 border border-dark-blue text-base font-medium rounded-lg shadow-lg text-dark-blue bg-white hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dark-blue transition duration-300">Read the paper on arXiv</a>
+					<a href="https://github.com/raysonlaroca/lrlpr-26" target="_blank" class="inline-flex items-center px-6 py-3 border border-dark-blue text-base font-medium rounded-lg shadow-lg text-dark-blue bg-white hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dark-blue transition duration-300">Access the LRLPR-26 dataset</a>
+					<a href="https://www.codabench.org/competitions/12259/#/results-tab" target="_blank" class="inline-flex items-center px-6 py-3 border border-dark-blue text-base font-medium rounded-lg shadow-lg text-dark-blue bg-white hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-dark-blue transition duration-300">View the leaderboard on Codabench</a>
 				</div>
 			</div>
 		</header>
@@ -170,7 +174,13 @@
 			</section>
 			<!-- Dataset Section -->
 			<section id="dataset" class="mb-16">
-				<h2 class="section-title text-3xl font-bold text-dark-blue mb-6">Dataset</h2>
+				<h2 class="section-title text-3xl font-bold text-dark-blue mb-6">Dataset (LRLPR-26)</h2>
+				<div class="mb-5 p-4 bg-green-50 border border-green-300 rounded-lg">
+					<p class="text-gray-700">
+						<b>The ICPR 2026 LRLPR competition has concluded.</b> The dataset created for the competition has been officially named <b>LRLPR-26</b>, and you can now access its official repository&nbsp;<a href="https://github.com/raysonlaroca/lrlpr-26" target="_blank" class="text-cyan font-semibold hover:underline">here</a>.
+					</p>
+				</div>
+
 				<!-- Dataset Illustration: Figure 1 -->
 				<div class="mb-2 flex justify-center">
 					<figure id="figure-1" class="max-w-6xl">
@@ -215,7 +225,7 @@
 										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path>
 									</svg>
 									<div>
-										<span class="font-semibold">Scenario&nbsp;B (10,000 tracks):</span> newly collected specifically for this competition, using the same camera as Scenario&nbsp;A but oriented in a different direction. These tracks were captured under a wider range of environmental conditions (<a href="#figure-3" class="hover:underline">Figure&nbsp;3</a>).
+										<span class="font-semibold">Scenario&nbsp;B (10,000 tracks):</span> newly collected specifically for this competition, using the same camera as Scenario&nbsp;A but oriented in a different direction. These tracks were captured under a wider range of environmental conditions (see <a href="#figure-3" class="hover:underline">Figure&nbsp;3</a>).
 										<ul class="list-disc ml-5 mt-2 text-gray-600">
 											<li>Each track includes <b>annotations</b> for the license plate text and layout. Corner annotations are not provided.</li>
 										</ul>
@@ -353,7 +363,7 @@ track_00003,GHI9012;0.4521
 					</div>
 					<div class="md:col-span-3 p-4 mt-2 bg-yellow-50 border border-yellow-300 rounded-lg">
 						<p class="text-dark-blue font-semibold">ICPR 2026 Presentation:</p>
-						<p class="text-gray-700">The competition summary paper will be presented at ICPR 2026 in <b>August 2026</b> and will subsequently be published in the conference proceedings.</p>
+						<p class="text-gray-700">The competition summary paper has been accepted for presentation at ICPR 2026 in <b>August 2026</b>. The arXiv version is available <a href="https://arxiv.org/abs/2604.22506" target="_blank" class="text-cyan font-semibold hover:underline">here</a>, and the Springer proceedings version will be linked once available.</p>
 					</div>
 				</div>
 			</section>
@@ -361,6 +371,33 @@ track_00003,GHI9012;0.4521
 			<section id="get-started" class="mb-16">
 				<h2 class="section-title text-3xl font-bold text-dark-blue mb-6">Get Started</h2>
 				<div class="bg-white p-8 rounded-xl shadow-xl space-y-6">
+					<!-- Post-competition dataset release -->
+					<div class="p-6 border-2 border-cyan bg-cyan-50 rounded-lg shadow-sm">
+						<div class="mb-3">
+							<span class="inline-flex items-center px-3 py-1 rounded-full bg-white text-dark-blue text-xs font-bold uppercase tracking-wide border border-cyan">
+								Post-competition update
+							</span>
+						</div>
+						<h3 class="text-2xl font-bold text-dark-blue mb-4">LRLPR-26 dataset release</h3>
+						<p class="text-gray-700 mb-4">
+							The ICPR 2026 LRLPR competition has concluded. The dataset created for the competition has been officially named <b>LRLPR-26</b>, and you can now access its official repository at&nbsp;<a href="https://github.com/raysonlaroca/lrlpr-26/" target="_blank" class="text-cyan font-semibold hover:underline">https://github.com/raysonlaroca/lrlpr-26/</a>.
+						</p>
+						<ul class="space-y-4 text-gray-700 list-disc ml-5">
+							<li>
+								<span class="font-semibold">Dataset contents:</span> LRLPR-26 includes the training samples and the annotated test samples used during the public and blind phases.
+							</li>
+							<li>
+								<span class="font-semibold">Competition paper:</span> the arXiv version is available <a href="https://arxiv.org/abs/2604.22506" target="_blank" class="text-cyan font-semibold hover:underline">here</a>. The Springer proceedings version is forthcoming.
+							</li>
+							<li>
+								<span class="font-semibold">Competition record:</span> the historical leaderboard remains available on <a href="https://www.codabench.org/competitions/12259/#/results-tab" target="_blank" class="text-cyan font-semibold hover:underline">Codabench</a>.
+							</li>
+							<li>
+								<span class="font-semibold">Original protocol:</span> the rules and evaluation criteria below document how the official competition ranking was computed.
+							</li>
+						</ul>
+					</div>
+
 					<!-- Step-by-step -->
 					<div class="p-6 border border-gray-200 rounded-lg">
 						<h3 class="text-2xl font-bold text-cyan mb-4">Step by step</h3>
@@ -678,6 +715,30 @@ track_00003,GHI9012;0.4521
 					</a>
 				</div>
 			</section>
+
+			<!-- Citation Section -->
+			<section class="mb-16" id="citation">
+				<h2 class="section-title text-3xl font-bold text-dark-blue mb-6">Citation</h2>
+				<div class="bg-white p-6 rounded-xl shadow-md">
+					<p class="text-gray-700 mb-5">If you use the LRLPR-26 dataset or refer to the ICPR 2026 LRLPR competition, please cite the competition summary paper:</p>
+					<ul class="list-disc ml-5 mb-4 text-sm text-gray-700">
+						<li class="break-words">
+							R. Laroca, V. Nascimento, D. Kim, S. Chung, S. Bae, U. Seo, S. Oh, C. M. Phung, M. G. Vo, X. Ye, Y. Du, Y. Su, Z. Chen, S. Heo, H. Lee, K. Na, K. V. Vu Nguyen, S. T. Pham, D. N. N. Phung, T. P. Le, V. N. Vo Tran, D. Menotti, <i>"ICPR 2026 Competition on Low-Resolution License Plate Recognition,"</i> in International Conference on Pattern Recognition (ICPR), pp. 1-20, Aug 2026.
+						</li>
+					</ul>
+					<pre class="whitespace-pre-wrap break-words bg-gray-100 border border-gray-200 rounded-lg p-4 text-sm text-gray-800"><code>@inproceedings{laroca2026competition,
+  title = {{ICPR} 2026 {C}ompetition on Low-Resolution License Plate Recognition},
+  author = {R. {Laroca} and V. {Nascimento} and D. {Kim} and S. {Chung} and S. {Bae} and U. {Seo} and S. {Oh} and C. M. {Phung} and M. G. {Vo} and X. {Ye} and Y. {Du} and Y. {Su} and Z. {Chen} and S. {Heo} and H. {Lee} and K. {Na} and K. V. {Vu Nguyen} and S. T. {Pham} and D. N. N. {Phung} and T. P. {Le} and V. N. {Vo Tran} and D. {Menotti}},
+  year = {2026},
+  month = {Aug},
+  booktitle = {International Conference on Pattern Recognition (ICPR)},
+  pages = {1-20},
+  doi = {},
+  issn = {}
+}</code></pre>
+				</div>
+			</section>
+
 			<!-- References Section -->
 			<section class="mb-16" id="references">
 				<h2 class="section-title text-3xl font-bold text-dark-blue mb-6">Selected References</h2>
